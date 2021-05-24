@@ -1,3 +1,7 @@
+/* Style sheet
+   color picker www.w3schools.com/colors/colors_picker.asp
+*/
+
 body {
   font: 16px Arial,sans-serif;
   padding-right: 10%;
@@ -22,6 +26,7 @@ p {
   padding-top: 15px;
 }
 
+/* formatting for the radio buttons */
 th, td {
   font-size: 12px;
   width: 100px;
@@ -38,6 +43,7 @@ img {
    margin-right: auto;
 }
 
+/* overlay code adapted from: https://www.w3schools.com/howto/howto_css_image_overlay.asp */
 .frame {
   position: relative;
   width: 100%;
@@ -91,7 +97,8 @@ img {
   transform: translate(-50%, -50%);
   text-align: center;
 }
-  
+
+/* page structure */
 .container {
     width: 100%;
     height: 100px;
@@ -105,6 +112,7 @@ img {
     background: #f2f2f2; 
 }
 
+/* survey question groupings */
 .question{
     padding-left: 15%;
 }
@@ -119,11 +127,11 @@ img {
     border-radius: 4px;
 }
 
-label {
+/* label {
     width: 15%;
     display: inline-block;
     align-content: center;
-}
+} */
 
 section {
     float: left; 
@@ -148,10 +156,12 @@ textarea{
   max-height: 100px;
 }
 
+/* styling the open response question */
 #long.answer, #long.question{
   padding: 0% 10% 0% 10%;
 }
 
+/* button formatting */
 .button {
   background-color: #4CAF50;
   border: none;
@@ -166,7 +176,7 @@ textarea{
 }
 
 footer {
-  background: #acb3b9;            
+  background: #bfbfbf;            
   text-align: center;
   padding: 10px;
 }
