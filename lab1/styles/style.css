@@ -60,17 +60,17 @@ img {
   opacity: 90%;
 }
 
-.link1:link, .link1:visited {
+.text_link:link, .text_link:visited {
   color: #7E9FCB;
   text-decoration: none;
 }
 
-.link1:hover {
+.text_link:hover {
   color: blue;
   text-decoration: underline;
 }
 
-.link2 {
+.img_link {
   background-color: #7E9FCB;
   color: white;
   padding: 14px 25px;

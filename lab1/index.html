@@ -10,7 +10,7 @@
         <h1>Survey</h1>
     </header>
 
-    <h3>"Alexa, submit my review of <a href="https://www.amazon.ca/" class="link1">Amazon's</a> website" </h3>
+    <h3>"Alexa, submit my review of <a href="https://www.amazon.ca/" class="text_link">Amazon's</a> website" </h3>
 
     <div class="container"><br>
         <p> Please fill out the survey below after viewing the website. </p>
@@ -18,178 +18,209 @@
 
     <form id="myform" class="form" action="index.php">
 
-    <div class="container">
+      <div class="container">
 
-      <div class="frame">
-        <img src="capture.png" alt="Website" class="image">
+        <div class="frame">
+          <img src="capture.png" alt="Website" class="image">
 
-        <div class="overlay">
-            <div class="box"><a href="https://www.amazon.ca/" class="link2">Visit site</a></div>
+          <div class="overlay">
+              <div class="box"><a href="https://www.amazon.ca/" class="img_link">Visit site</a></div>
+          </div>
+
         </div>
 
+      <div class="wrapper" id="text">
+            <section>
+                  <div class="question" id="name">Name:</div>
+              </section>
+            <section>
+                <div class="answer"><input class="text" id="name"></div>
+            </section>
       </div>
 
-    <div class="wrapper" id="text">
-          <section>
-                <div class="question" >Name:</div>
-            </section>
-          <section>
-              <div class="answer"><input class="text" id="name"></div>
-          </section>
-    </div>
 
-
-    <div class="wrapper" id="text">
-          <section>
-                <div class="question" >Age group:</div>
-            </section>
-          <section>
-              <div class="answer">
-                <select>
-                    <option disabled selected value> -- Select an option -- </option>
-                    <option value= "hs">18-24</option>
-                    <option value= "college">25-30</option>
-                    <option value= "uni">30-40</option>
-                    <option value= "masters">40-50</option>
-                    <option value= "phd">50+</option>
-                </select>
-              </div>
-          </section>
-    </div>
-
-    <div class="wrapper" id="text">
-          <section>
-                <div class="question" >Highest level of education:</div>
-            </section>
-          <section>
-              <div class="answer">
-                <select>
-                    <option disabled selected value> -- Select an option -- </option>
-                    <option value= "hs">Highschool Diploma</option>
-                    <option value= "college">College</option>
-                    <option value= "uni">University</option>
-                    <option value= "masters">Master's</option>
-                    <option value= "phd">Doctorate</option>
-                </select>
-              </div>
-          </section>
-    </div>
-
-    <div class="wrapper" id="select">
-
-        <section>
-              <div class="question">Was this your first time browsing the website?</div>
-        </section>
-
-        <section>
-              <div class="answer">
+      <div class="wrapper" id="text">
+            <section>
+                  <div class="question" id="edu">Age group:</div>
+              </section>
+            <section>
+                <div class="answer">
                   <select>
-                    <option disabled selected value> -- Select an option -- </option>
-                    <option value= "yes">Yes</option>
-                    <option value= "no">No</option>
+                        <option disabled selected value> -- Select an option -- </option>
+                        <option value="1">18-24</option>
+                        <option value="2">25-39</option>
+                        <option value="3">40-60</option>
+                        <option value="5">60+</option>
+                    </select>
+                </div>
+            </section>
+      </div>
+
+      <div class="wrapper" id="text">
+            <section>
+                  <div class="question" >Highest level of education:</div>
+              </section>
+            <section>
+                <div class="answer">
+                  <select>
+                      <option disabled selected value> -- Select an option -- </option>
+                      <option value= "hs">Highschool Diploma</option>
+                      <option value= "college">College</option>
+                      <option value= "uni">University</option>
+                      <option value= "masters">Master's</option>
+                      <option value= "phd">Doctorate</option>
                   </select>
-              </div>
-        </section>
-    </div>
+                </div>
+            </section>
+      </div>
 
-        <div class="wrapper" id="radio">
+      <div class="wrapper" id="radio">
+            <section>
+                  <div class="question">How often do you online shop?</div>
+            </section>
+            <section>
+                  <div class="answer">
+                  <table> 
+                      <tr>
+                        <th><label for="never" >Never</label></th>
+                        <th><label for="rarely">Rarely</label></th>
+                        <th><label for="sometimes">Sometimes</label></th>
+                        <th><label for="often">Often</label></th>
+                        <th><label for="always">Very often</label></th>
+                      </tr>
+                      <tr>
+                        <td><input type="radio" class="radio" id="never" name="rate1" value="never"></td>
+                        <td><input type="radio" class="radio" id="rarely" name="rate1" value="rarely"></td>
+                        <td><input type="radio" class="radio" id="sometimes" name="rate1" value="sometimes"></td>
+                        <td><input type="radio" class="radio" id="often" name="rate1" value="often"></td>
+                        <td><input type="radio" class="radio" id="always" name="rate1" value="always"></td>
+                      </tr>
+                  </table>
+                  </div>
+            </section>
+      </div>
+
+      <div class="wrapper" id="select">
+
           <section>
-                <div class="question">How would you rate your overall experience in navagating the website?</div>
+                <div class="question">Was this your first time browsing the website?</div>
           </section>
+
           <section>
                 <div class="answer">
-                <table> 
-                    <tr>
-                      <th><label for="awful">Awful</label></th>
-                      <th><label for="bad">Bad</label></th>
-                      <th><label for="okay">Okay</label></th>
-                      <th><label for="good">Good</label></th>
-                      <th><label for="excellent">Excellent</label></th>
-                    </tr>
-                    <tr>
-                      <td><input type="radio" id="awful" name="rate" value="awful"></td>
-                      <td><input type="radio" id="bad" name="rate" value=" bad "></td>
-                      <td><input type="radio" id="okay" name="rate" value="okay"></td>
-                      <td><input type="radio" id="good" name="rate" value="good"></td>
-                      <td><input type="radio" id="excellent" name="rate" value="excellent"></td>
-                    </tr>
-                </table>
+                    <select>
+                      <option disabled selected value> -- Select an option -- </option>
+                      <option value= "yes">Yes</option>
+                      <option value= "no">No</option>
+                    </select>
                 </div>
           </section>
-        </div>
+      </div>
 
-        <div class="wrapper" id="radio">
-          <section>
-                <div class="question">Did it take you more or less time than expected to find what you were looking for?</div>
-          </section>
-          <section>
-                <div class="answer">
-                <table> 
-                    <tr>
-                      <th><label for="1">Much more</label></th>
-                      <th><label for="2">A little more</label></th>
-                      <th><label for="3">About as expected</label></th>
-                      <th><label for="4">A little less</label></th>
-                      <th><label for="5">Much less</label></th>
-                    </tr>
-                    <tr>
-                      <td><input type="radio" id="1" name="rate" value="1"></td>
-                      <td><input type="radio" id="2" name="rate" value=" 2 "></td>
-                      <td><input type="radio" id="3" name="rate" value="3"></td>
-                      <td><input type="radio" id="4" name="rate" value="4"></td>
-                      <td><input type="radio" id="5" name="rate" value="5"></td>
-                    </tr>
-                </table>
-                </div>
-          </section>
-        </div>
-
-        <div class="wrapper" id="check">
-          <section>
-                <div class="question">What did you like about the website?<br>Select all that apply.</div>
-          </section>
-
-          <section>
-              <div class="answer">
-                  <input type="checkbox" class="checkbox"> check <br>
-                  <input type="checkbox" class="checkbox"> check <br>
-                  <input type="checkbox" class="checkbox"> check <br>
-              </div>
-          </section>
-        </div>
-
-        <div class="wrapper" id="check">
-          <section>
-                <div class="question">What did you not like about the website?<br>Select all that apply.</div>
-          </section>
-
-          <section>
-              <div class="answer">
-                  <input type="checkbox" class="checkbox"> check <br>
-                  <input type="checkbox" class="checkbox"> check <br>
-                  <input type="checkbox" class="checkbox"> check <br>
-              </div>
-          </section>
-        </div>
-      
-        <div class="wrapper" id="long">
-          <div class = "section">
-             <div class="question" id="long">How can the website be improved?</div><br>
-             <div class="answer" id="long"><textarea rows="5"></textarea></div>
+          <div class="wrapper" id="radio">
+            <section>
+                  <div class="question">How would you rate your overall experience in navagating the website?</div>
+            </section>
+            <section>
+                  <div class="answer">
+                  <table> 
+                      <tr>
+                        <th><label for="awful">Awful</label></th>
+                        <th><label for="bad">Bad</label></th>
+                        <th><label for="okay">Okay</label></th>
+                        <th><label for="good">Good</label></th>
+                        <th><label for="excellent">Excellent</label></th>
+                      </tr>
+                      <tr>
+                        <td><input type="radio" id="awful" name="rate2" value="awful"></td>
+                        <td><input type="radio" id="bad" name="rate2" value=" bad "></td>
+                        <td><input type="radio" id="okay" name="rate2" value="okay"></td>
+                        <td><input type="radio" id="good" name="rate2" value="good"></td>
+                        <td><input type="radio" id="excellent" name="rate2" value="excellent"></td>
+                      </tr>
+                  </table>
+                  </div>
+            </section>
           </div>
-        </div>
 
-        <div class="wrapper">
-          <button id="submit" type="button" class="button">
-                SUBMIT
-          </button>
-        </div>
+          <div class="wrapper" id="radio">
+            <section>
+                  <div class="question">Did it take you more or less time than expected to find what you were looking for?</div>
+            </section>
+            <section>
+                  <div class="answer">
+                  <table> 
+                      <tr>
+                        <th><label for="1">Much more</label></th>
+                        <th><label for="2">Slightly more</label></th>
+                        <th><label for="3">About as expected</label></th>
+                        <th><label for="4">Slightly less</label></th>
+                        <th><label for="5">Much less</label></th>
+                      </tr>
+                      <tr>
+                        <td><input type="radio" id="1" name="rate3" value="1"></td>
+                        <td><input type="radio" id="2" name="rate3" value="2"></td>
+                        <td><input type="radio" id="3" name="rate3" value="3"></td>
+                        <td><input type="radio" id="4" name="rate3" value="4"></td>
+                        <td><input type="radio" id="5" name="rate3" value="5"></td>
+                      </tr>
+                  </table>
+                  </div>
+            </section>
+          </div>
 
-        <footer>
-                <p>@ me</p>
-        </footer>
+          <div class="wrapper" id="check">
+            <section>
+                  <div class="question">How would you describe the website?<br>Select all that apply.</div>
+            </section>
 
-    </div>
+            <section>
+                <div class="answer">
+                    <input type="checkbox" class="checkbox"> Reliable 
+                    <input type="checkbox" class="checkbox"> Confusing 
+                    <input type="checkbox" class="checkbox"> Boring
+                    <input type="checkbox" class="checkbox"> Easy to use<br>
+                    <input type="checkbox" class="checkbox"> Secure 
+                    <input type="checkbox" class="checkbox"> Uniform 
+                    <input type="checkbox" class="checkbox"> Outdated
+                    <input type="checkbox" class="checkbox"> Cluttered<br>
+                </div>
+            </section>
+          </div>
+
+          <div class="wrapper" id="check">
+            <section>
+                  <div class="question">Would you use this website again in the future?</div>
+            </section>
+
+            <section>
+                <select>
+                      <option disabled selected value> -- Select an option -- </option>
+                      <option value= "hs">Yes.</option>
+                      <option value= "masters">Maybe. I would consider it</option>
+                      <option value= "phd">No. I would shop elsewhere</option>
+                  </select>
+            </section>
+          </div>
+        
+          <div class="wrapper" id="long">
+            <div class = "section">
+               <div class="question" id="long">How can the website be improved?</div><br>
+               <div class="answer" id="long"><textarea rows="5"></textarea></div>
+            </div>
+          </div>
+
+          <div class="wrapper">
+            <button id="submit" type="button" class="button">
+                  SUBMIT
+            </button>
+          </div>
+
+          <footer>
+                  <p>Website designed by Sam Comisso</p>
+          </footer>
+
+      </div>
     </form>
 
 </body>
