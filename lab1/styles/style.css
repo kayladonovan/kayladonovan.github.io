@@ -119,6 +119,7 @@ img {
 
 .answer{
     padding-right: 15%;
+    font-size: 12px;
 }
 
 .text, select {
@@ -126,12 +127,6 @@ img {
     padding: 10px 10px;
     border-radius: 4px;
 }
-
-/* label {
-    width: 15%;
-    display: inline-block;
-    align-content: center;
-} */
 
 section {
     float: left; 
@@ -150,7 +145,7 @@ section {
     background: white; 
 }
 
-textarea{
+textarea {
   width: 100%;
   max-width: 100%;
   max-height: 100px;
