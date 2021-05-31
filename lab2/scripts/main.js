@@ -140,7 +140,7 @@ function selectedItems(){
 	
 	// build list of selected item
 	var para = document.createElement("P");
-	para.innerHTML = "Your cart";
+	para.innerHTML = "Items for purchase";
 	para.appendChild(document.createElement("br"));
 	para.appendChild(document.createElement("br"));
 	for (i = 0; i < ele.length; i++) { 
