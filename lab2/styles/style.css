@@ -10,7 +10,6 @@ body {
   text-align: center;
   font-size: 30px;
   font-stretch: expanded;
-  padding-top:10px;
 }
 span {
   color: #80b380
@@ -109,13 +108,12 @@ span {
 }
 
 #Client, #Products, #Cart {
-  height: 450px;
+  height: auto;
 }
 
 .block{
   padding: 8px;
   border: border: 1px;
-
   cursor: pointer;
 }
 
