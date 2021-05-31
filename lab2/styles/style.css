@@ -10,6 +10,7 @@ body {
   text-align: center;
   font-size: 30px;
   font-stretch: expanded;
+  padding-top:10px;
 }
 span {
   color: #80b380
