@@ -150,7 +150,6 @@ function selectedItems(){
 			chosenProducts.push(ele[i].value);
 		}
 	}
-	para.appendChild(document.createElement("br"));
 		
 	// add paragraph and total price
 	c.appendChild(para);
