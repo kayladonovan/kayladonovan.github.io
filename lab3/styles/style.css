@@ -1,0 +1,262 @@
+/* This style sheet contains sections of code from indicated references. */
+
+body {
+  font-family: "Arial";
+}
+
+/* styling for grocery store name */
+#header {
+  font-family: "Helvetica";
+  text-align: center;
+  font-size: 25px;
+  font-stretch: expanded;
+  padding-top: 10px;
+}
+#store {
+  color: #80b380
+}
+
+/* container for the user's restrictions */
+#filters {
+  padding: 10px 50px 50px 50px;
+}
+
+/* styling for the instuctions on the client section */
+#disclaimer {
+  font-style: italic;
+  color: grey;
+  font-size: 12px;
+}
+#label {
+  color: #80b380;
+  font-size: 14px;
+}
+
+/* styling for the user-prefered text size*/
+#adjustTextSize {
+   padding-top: 60px;
+   font-size: 16px;
+   float: center;
+}
+#small {
+  font-size: 10px;
+  background-color: white;
+  border: none;
+  outline: none;
+  cursor: pointer;
+}
+#medium {
+  font-size: 14px;
+  background-color: white;
+  border: none;
+  outline: none;
+  cursor: pointer;
+}
+#large {
+  font-size: 16px;
+  background-color: white;
+  border: none;
+  outline: none;
+  cursor: pointer;
+}
+
+
+/* styling the navigation pattern */
+ul {
+  list-style: none;
+}
+.nav_pattern {
+  margin: auto;
+  width: 80%;
+}
+
+/*---------------------------------------------------------------------------*/
+/* code for wizard pattern styling adapted from: https://codepen.io/team/css-tricks/pen/xRmmdr
+/*---------------------------------------------------------------------------*/
+.wizard { 
+  list-style: none; 
+  overflow: hidden; 
+  font: 16px Arial;
+  margin: 40px;
+  padding: 0;
+}
+.wizard li { 
+  float: left; 
+}
+.wizard li a {
+  position: relative; 
+  display:inline-block;
+  padding: 12px 70px 12px 60px;
+  text-decoration: none; 
+  background: #80b380; 
+  color: white;
+  min-width: 70px; 
+  width: auto;
+}
+.wizard li a:after { 
+  content: " "; 
+  border-top: 50px solid transparent;    
+  border-bottom: 50px solid transparent;
+  border-left: 30px solid #80b380;
+  position: absolute;
+  top: 50%;
+  margin-top: -50px; 
+  left: 100%;
+  z-index: 2; 
+} 
+.wizard li a:before { 
+  content: " "; 
+  border-top: 50px solid transparent;         
+  border-bottom: 50px solid transparent;
+  border-left: 30px solid white;
+  position: absolute;
+  top: 50%;
+  margin-top: -50px; 
+  margin-left: 1px;
+  left: 100%;
+  z-index: 1; 
+} 
+.wizard li a:hover { background: #568f56 }
+.wizard li a:hover:after { border-left-color: #568f56 }
+.wizard li a:active { background: #568f56 }
+/*---------------------------------------------------------------------------*/
+
+/* styling for the tab content */
+.tabcontent {
+  display: none;
+  margin-left: 20%; 
+  overflow: auto;
+  height: 800px;
+}
+
+
+/*---------------------------------------------------------------------------*/
+/* code for toast confirmation from: w3schools.com/howto/howto_js_snackbar.asp
+/*---------------------------------------------------------------------------*/
+#snackbar {
+  visibility: hidden;
+  min-width: 250px;
+  margin-left: -125px;
+  background-color: #333;
+  color: white;
+  text-align: center;
+  border-radius: 2px;
+  padding: 16px;
+  position: fixed;
+  z-index: 1;
+  left: 50%;
+  bottom: 100px;
+  font-size: 17px;
+}
+#snackbar.show {
+  visibility: visible;
+  -webkit-animation: fadein 0.5s, fadeout 0.5s 2.5s;
+  animation: fadein 0.5s, fadeout 0.5s 2.5s;
+}
+@-webkit-keyframes fadein {
+  from {bottom: 0; opacity: 0;} 
+  to {bottom: 100px; opacity: 1;}
+}
+@keyframes fadein {
+  from {bottom: 0; opacity: 0;}
+  to {bottom: 100px; opacity: 1;}
+}
+@-webkit-keyframes fadeout {
+  from {bottom: 100px; opacity: 1;} 
+  to {bottom: 0; opacity: 0;}
+}
+@keyframes fadeout {
+  from {bottom: 100px; opacity: 1;}
+  to {bottom: 0; opacity: 0;}
+}
+/*---------------------------------------------------------------------------*/
+
+/*---------------------------------------------------------------------------*/
+/* code for Sign in accordion from: w3schools.com/howto/howto_js_snackbar.asp*/
+/*---------------------------------------------------------------------------*/
+.accordion {
+  background-color: #eee;
+  color: #444;
+  cursor: pointer;
+  padding: 18px;
+  width: 800px;
+  border: none;
+  text-align: left;
+  outline: none;
+  font-size: 15px;
+  transition: 0.4s;
+}
+
+.active, .accordion:hover {
+  background-color: #ccc; 
+}
+
+.panel {
+  padding: 0 18px;
+  display: none;
+  background-color: #f2f2f2;
+  overflow: hidden;
+  width: 765px;
+}
+
+#arrow {
+  float: right;
+}
+
+/*---------------------------------------------------------------------------*/
+
+/* styling for sign up section */
+.wrapper {
+    height: 100%;
+    /*padding-right: 5%;*/
+    padding-bottom: 5%;
+}
+.container {
+    width: 100%;
+    height: auto;
+}
+.question {
+    padding-left: 30%;
+}
+.answer {
+    padding-right: 80%;
+}
+section {
+    float: left; 
+    padding: 10px;
+    box-sizing: border-box;
+    height: auto;
+    width: 50%;
+    padding-bottom: 20px;
+}
+
+/* styling for buttons */
+.block{
+  padding: 8px;
+  min-width: 100px;
+  border: 1px;
+  cursor: pointer;
+}
+.next{
+  padding: 8px;
+  min-width: 100px;
+  border: none;
+  background-color: #568f56;
+  color: white;
+  cursor: pointer;
+}
+#signup {
+  float: right;
+}
+
+/* styling for signature */
+.footer {
+   position: fixed;
+   left: 0;
+   bottom: 0;
+   width: 100%;
+   background-color: #80b380;
+   color: white;
+   text-align: center;
+   font-size: 16px;
+}

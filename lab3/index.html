@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+
+<!-- external stylesheet for nav icons from font-awesone library -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+<html>
+<head>
+	<! This style sheet is taken from  https://www.w3schools.com/howto/howto_js_tabs.asp>
+	<link href="styles/style.css" rel="stylesheet" type="text/css">
+</head>
+
+<p id ="header"><b>bode</b><span id="store"><b>go</b></span></p>
+<body id="body">
+
+<!-- Wizard steps, each one with an onclick event associated with it -->
+<div class="nav_pattern">
+	<ul class="wizard">
+		<li><a href="#" class="step" onclick="openInfo(event, 'Client')"><i class="fa fa-home"></i> Hello | Sign in</a></li>
+		<li><a href="#" class="step" onclick="openInfo(event, 'Products')"><i class="fa fa-check-circle"></i> Select Items</a></li>
+		<li><a href="#" class="step" onclick="openInfo(event, 'Pickup')"><i class="fa fa-calendar"></i> Pickup Method</a></li>
+		<li><a href="#" class="step" onclick="openInfo(event, 'Cart')"><i class="fa fa-shopping-cart"></i> Checkout</a></li>
+		<li></li>
+	</ul>
+</div>
+
+<!-- Tab content -->
+<div id="Client" class="tabcontent">
+  <button class="accordion" onclick="signup()"><b>Stay updated!</b> Click here to find out how<span id="arrow">&#9660;</span> </button>
+  <div class="panel">
+	  <p>Sign up with your email to recieve updates on your deliveries, deals and more!</p>
+	  <div class="container">
+		  <div class="wrapper">
+	            <section>
+	                  <div class="question" id="name">Name</div>
+	              </section>
+	            <section>
+	                <div class="answer"><input class="text" id="name"></div>
+	            </section>
+	      </div>
+	      <div class="wrapper">
+	            <section>
+	                  <div class="question" id="email">Email</div>
+	              </section>
+	            <section>
+	                <div class="answer"><input class="text" id="email"></div>
+	            </section>
+	      </div>
+	      <div class="wrapper"><button class="next" id="signup" type="reset">Sign up</button></div>
+  	  </div>
+  </div>
+
+  <h3>Tell us a bit about you</h3>
+	Filter your results by selecting all that apply. 
+
+	<form>
+	<div id="filters">
+		<p id="label">Dietary Restrictions</p> 
+		<input type="checkbox" name="restriction" id="nutfree" value="nutfree" onchange="checkChoices()">
+		<label for="nutfree">Nut alergy</label><br>
+		<input type="checkbox" name="restriction" id="dairyfree" value="dairyfree" onchange="checkChoices()">
+		<label for="dairyfree">Lactose free</label><br>
+		<p id="label">Preferences</p> 
+		<input type="checkbox" name="restriction" id="organic" value="organic" onchange="checkChoices()">
+		<label for="oganic">Organic</label><br><br><br>
+		<p id="disclaimer">Check "None" if none of the restrictions or preferences apply to you.</p>
+		<input type="checkbox" name="restriction" id="none" value="none" onchange="checkChoices()">
+		<label for="none">None</label><br><br>
+	</div>
+	<button class="block" type="reset">Clear</button>
+	<!-- <div id="snackbar1">Updated Results</div> -->
+	<button class="next" onclick="openInfo(event, 'Products')">Next</button>
+
+	<br>
+	<div id="adjustTextSize"><span>Text Size</span>
+	<button class="textsize" id="small" onclick="adjustTextSize(event, 'small')"> Aa </button>
+	<button class="textsize" id="medium" onclick="adjustTextSize(event, 'medium')"> Aa </button>
+	<button class="textsize" id="large" onclick="adjustTextSize(event, 'large')"> Aa </button></div>
+	</form>
+
+</div>
+
+<div id="Products" class="tabcontent">
+  <h3>Your targeted products</h3>
+  <p>We preselected products based on your restrictions.</p>
+	<p id ="label">Select items from the list below you wish to buy</p>
+	<div id="displayProduct"></div><br>
+	<button id="addCart" type="button" class="block" onclick="selectedItems(); cartConfirmation()">Add to cart</button>
+	<div id="snackbar">Item(s) updated in cart!</div>
+	<button class="next" onclick="openInfo(event, 'Pickup')">Next</button>
+
+	<br>
+	<div id="adjustTextSize"><span>Text Size</span>
+	<button class="textsize" id="small" onclick="adjustTextSize(event, 'small')"> Aa </button>
+	<button class="textsize" id="medium" onclick="adjustTextSize(event, 'medium')"> Aa </button>
+	<button class="textsize" id="large" onclick="adjustTextSize(event, 'large')"> Aa </button></div>
+</div>
+
+<div id="Pickup" class="tabcontent">
+  <h3>Pick up method</h3>
+  <p>We provide delivery and curbside pickup options to best suit your schedule.</p>
+  <p id="disclaimer">A confirmation number and receipt of your order will be sent to the email address you enter.<br></p>
+  <div id="displayPickup"></div>
+
+  		<form>
+  			<div class="container" id = "form">
+			  	<div class="wrapper">
+				  	<section class="pickup">
+					  <div class = "question"><input type="radio" id="method" name="method">Pick up from store</div>
+					</section>
+					<section class="pickup">
+					  <div class = "answer"><input type="text" id="addy" name="addy"></div>
+					</section>
+				</div>
+			</div>
+			<div class="container" id = "form">
+			  	<div class="wrapper">
+				  	<section class="delivery">
+					  <div class = "question"><input type="radio" id="method" name="method">Deliver to my door</div>
+					</section>
+					<section class="pickup">
+					  <div class = "answer"><input type="text" id="addy" name="addy"></div>
+					</section>
+				</div>
+			</div>
+  			<div class="container" id = "form">
+			  	<div class="wrapper">
+				  	<section class="pickup">
+					  <div class = "question">Select a timeslot*</div>
+					</section>
+					<section class="pickup">
+					  <div class = "answer"><input type="datetime-local" id="date" name="date"></div>
+					</section>
+				</div>
+			</div>
+			<div class="container" id = "form">
+				<div class="wrapper">
+		            <section>
+		                  <div class="question" id="email">Email*</div>
+		              </section>
+		            <section>
+		                <div class="answer"><input class="text" id="email"></div>
+		            </section>
+		        </div>
+		    </div>
+		    <div class="container" id = "form">
+		    	<div class="wrapper">
+		          <section>
+		             <div class="question">Special Instructions</div>
+		          </section>
+		          <section>
+		          	<div class="answer"><input type="text"></div>
+		          </section>
+		        </div>
+	        </div>
+        <br><br><br><br>
+        <button class="block" type="reset">Confirm</button>
+		<button class="next" onclick="openInfo(event, 'Cart')">Next</button>
+		</form>
+    <br>
+	<div id="adjustTextSize"><span>Text Size</span>
+	<button class="textsize" id="small" onclick="adjustTextSize(event, 'small')"> Aa </button>
+	<button class="textsize" id="medium" onclick="adjustTextSize(event, 'medium')"> Aa </button>
+	<button class="textsize" id="large" onclick="adjustTextSize(event, 'large')"> Aa </button></div>
+</div>
+
+<div id="Cart" class="tabcontent">
+  <h3>Cart</h3>
+  <div id="displayCart"></div>
+  <br><br>
+  <button class="block" onclick="openInfo(event, 'Client')">Cancel</button>
+  <button class="next" >Checkout</button>
+  
+  	<br>
+	<div id="adjustTextSize"><span>Text Size</span>
+	<button class="textsize" id="small" onclick="adjustTextSize(event, 'small')"> Aa </button>
+	<button class="textsize" id="medium" onclick="adjustTextSize(event, 'medium')"> Aa </button>
+	<button class="textsize" id="large" onclick="adjustTextSize(event, 'large')"> Aa </button></div>
+</div>
+
+<div class="footer">
+  <p>Wesite created by KD</p>
+</div>
+
+<script src="scripts/groceries.js"></script>
+<script src="scripts/main.js"></script>
+
+</body>
+</html>
