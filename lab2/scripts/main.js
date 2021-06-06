@@ -140,19 +140,16 @@ function selectedItems(){
 	
 	// build list of selected item
 	var para = document.createElement("P");
-	para.innerHTML = "Your cart";
+	para.innerHTML = "Items for purchase";
 	para.appendChild(document.createElement("br"));
 	para.appendChild(document.createElement("br"));
 	for (i = 0; i < ele.length; i++) { 
 		if (ele[i].checked) {
 			para.appendChild(document.createTextNode("- " + ele[i].value));
 			para.appendChild(document.createElement("br"));
-			para.appendChild(document.createElement("br"));
 			chosenProducts.push(ele[i].value);
 		}
 	}
-	para.appendChild(document.createElement("br"));
-	para.appendChild(document.createElement("br"));
 		
 	// add paragraph and total price
 	c.appendChild(para);
