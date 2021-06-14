@@ -1,0 +1,222 @@
+<!doctype html>
+<!-- Here is a link to the code the documents this code is based on
+https://getbootstrap.com/docs/5.0/getting-started/introduction/
+This will help you get started with your code!
+-->
+<html lang="en">
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" crossorigin="anonymous">
+    <link href="styles/styles.css" rel="stylesheet" type="text/css">
+    <title>Lab 4</title>
+</head>
+<body>
+
+<!--
+I store all of the page information in a container,
+Many websites will use what is called CSS grid layouts, where you will have a header, body, footer and both sides used for ads or other information
+-->
+<div class = "container-lg">
+
+    <!--
+    Most websites now feature what is called a NavBar.
+    The example I give is quite simple with a logo and some text, but you can use it for many navigational patterns
+    https://getbootstrap.com/docs/5.0/components/navbar/
+    -->
+
+    <!-- As a heading -->
+    <nav class="navbar navbar-dark bg-dark text-white">
+      <div class="container-fluid">
+        <h4><span id="name">Pet</span>awawa Veterinary Clinic</h4>
+      </div>
+    </nav>
+
+    <div class="p-3 my-3">
+        <h1>Welcome to the Petawawa Veterinary Clinic</h1>
+        <p class="p-4 my-3" style="font-size: 18px"><b>Your dedicated veterinarians located in Petawawa, ON. </b><br> We are committed to providing the best care to your pets.</p>
+    </div>
+
+    <!--
+    We can also use buttons to expand some hidden options
+    https://getbootstrap.com/docs/5.0/components/collapse/
+    -->
+    <div class="p-3">
+    <h3>Our Services</h3>
+        <!--
+    Tables are one of many ways to organize information easily.
+    It is a good way to list of prices, or services in a business website
+    https://getbootstrap.com/docs/5.0/content/tables/
+    -->
+    
+    <table class="table table-primary">
+        <thead>
+            <tr>
+                <th scope="col"><h5>Service</h5></th>
+                <th scope="col"><h5>Price Range</h5></th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>Preventive Care</td>
+                <td>$100 - $200</td>
+            </tr>
+            <tr>
+                <td>Diagnostics</td>
+                <td>$150 - $250</td>
+            </tr>
+            <tr>
+                <td>Surgery</td>
+                <td>$100 - $1000</td>
+            </tr>
+            <tr>
+                <td>Dentistry</td>
+                <td>$300 - $500</td>
+            </tr>
+            <tr>
+                <td>Nutritional Counseling</td>
+                <td>$50 - $200</td>
+            </tr>
+        </tbody>
+    </table>
+
+    <button class="btn btn-primary" type="button" data-bs-toggle="collapse" data-bs-target="#collapseExample" aria-expanded="false" aria-controls="collapseExample" align="center">
+        Click here to book an appointment
+    </button>
+
+    <div class="collapse" id="collapseExample">
+        <div class="card card-body">
+            <form class="row g-3">
+              <div class="col-12">
+                <label for="service" class="form-label" id="contact">Book an appointment with us!</label>
+                <select id="inputState" class="form-select">
+                  <option selected disabled>Select a service</option>
+                  <option>Preventive Care</option>
+                  <option>Diagnostics</option>
+                  <option>Surgery</option>
+                  <option>Dentistry</option>
+                  <option>Nutritional Counseling</option>
+                </select>
+              </div>
+              <div class="col-12">
+                <label for="appointment">Time slot (date and time):</label><br>
+                <input type="datetime-local" id="appointment" name="appointment">
+              </div>
+              <div class="col-md-6">
+                <label for="fname" class="form-label">First Name</label>
+                <input type="text" class="form-control" id="fname">
+              </div>
+              <div class="col-md-6">
+                <label for="lname" class="form-label">Last Name</label>
+                <input type="text" class="form-control" id="lname">
+              </div>
+              <div class="col-12">
+                <label for="email" class="form-label">Email</label>
+                <input type="email" class="form-control" id="email" placeholder="user@email.com">
+              </div>
+              <div class="col-12">
+                <label for="phone" class="form-label">Phone number</label>
+                <input type="phone" class="form-control" id="phone" placeholder="999-999-9999">
+              </div>
+              <div class="col-md-4">
+                <label for="pname" class="form-label">Pet's Name</label>
+                <input type="text" class="form-control" id="pname">
+              </div>
+              <div class="col-md-2">
+                <label for="type" class="form-label">Type of Animal</label>
+                <select id="type" class="form-select">
+                  <option selected></option>
+                  <option>Dog</option>
+                  <option>Cat</option>
+                  <option>Other</option>
+                </select>
+              </div>
+              <div class="col-md-2">
+                <label for="age" class="form-label">Date of Birth</label>
+                <input type="text" class="form-control" id="age" placeholder="year-month-day">
+              </div>
+              <div class="col-md-2">
+                <label for="weight" class="form-label">Weight (lbs)</label>
+                <input type="text" class="form-control" id="weight">
+              </div>
+              <div class="col-md-2">
+                <label for="gender" class="form-label">Gender</label>
+                <select id="gender" class="form-select">
+                  <option selected></option>
+                  <option>Male</option>
+                  <option>Female</option>
+                </select>
+              </div>
+              <div class="col-12">
+                <button type="submit" class="btn btn-primary">Confirm</button>
+                <button type="submit" class="btn btn-dark">Cancel</button>
+              </div>
+            </form>
+        </div>
+    </div>
+
+    </div>
+
+    <!-- Cards are quite useful when building a website. They are a useful way to organize information.
+    They can be organized using a CSS grid or other layout options.
+    https://getbootstrap.com/docs/5.0/components/card/
+    -->
+
+    <div class="p-3 my-4">
+    <h3>Meet Our Team of Experts</h3>
+    <div class="row justify-content-around">
+        <div class="card" style="width: 18rem;">
+            <img src="images/doctor.jpg" class="card-img-top" alt="...">
+            <div class="card-body">
+                <p class="card-name" >Dr. Jennifer Thompson</p>
+                <p class="card-text" >Veterinarian</p>
+            </div>
+        </div>
+        <div class="card" style="width: 18rem;">
+            <img src="images/doctor4.jpg" class="card-img-top" alt="...">
+            <div class="card-body">
+                <p class="card-name" >Dr. James Campbell</p>
+                <p class="card-text" >Veterinarian</p>
+            </div>
+        </div>
+        <div class="card" style="width: 18rem;">
+            <img src="images/doctor2.jpg" class="card-img-top" alt="...">
+            <div class="card-body">
+                <p class="card-name" >Jessica Brown</p>
+                <p class="card-text" >Veterinary Technician</p>
+            </div>
+        </div>
+        <div class="card" style="width: 18rem;">
+            <img src="images/doctor3.jpg" class="card-img-top" alt="...">
+            <div class="card-body">
+                <p class="card-name" >Will Richardson</p>
+                <p class="card-text" >Veterinary Assistant</p>
+            </div>
+        </div>
+    </div>
+    </div>
+    
+    <div class="p-3 my-3 bg-dark text-white">
+        <div class="row g-3">
+        <div class="col-6">
+            <h2 id="info">Contact Information</h2>
+            <p>123 Petawawa Blvd.<br>Petawawa, ON<br>K8H 3G2<br></p>
+            <p>Phone: 613-333-3333</p>
+        </div>
+        <div class="col-6">
+            <h2 id="info">Hours</h2>
+            <p> Mon–Fri: 8:00AM – 6:00PM<br>
+            <p> Saturday: 8:00AM – 8:00PM<br>
+            <p> Sunday: Closed<br>
+            </p>
+        </div>
+    </div>
+    </div>
+
+</div>
+<!-- here we input our javascript helper -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-gtEjrD/SeCtmISkJkNUaaKMoLD0//ElJ19smozuHV6z3Iehds+3Ulb9Bn9Plx0x4" crossorigin="anonymous"></script>
+</body>
+</html>
