@@ -1,0 +1,87 @@
+version: '2.0'
+session_config:
+  session_expiration_time: 60
+  carry_over_slots_to_new_session: true
+intents:
+- greet
+- inform
+- subscribe
+- unsubscribe
+- thank you
+- goodbye
+- explanation
+slots:
+  email:
+    type: unfeaturized
+    influence_conversation: false
+responses:
+   utter_greet:
+       - text: |
+           Hello! How can I help you?
+       - text: |
+           Hi!
+       - text: |
+           Hey!
+       - text: |
+           Howdy!
+       - text: |
+           Good day!
+       - text: |
+           Salutations!
+   utter_ask_email:
+       - text: |
+           What is your email address?
+   utter_subscribed:
+       - text: |
+           Check your inbox at {email} in order to finish subscribing to the newsletter!
+       - text: |
+           You're all set! Check your inbox at {email} to confirm your subscription.
+   utter_thanks: 
+       - text: |
+          Anytime!
+       - text: |
+          Glad I could help!
+       - text: |
+          No problem!
+       - text: |
+          You are welcome!
+   utter_goodbye:
+       - text: |
+          See you later!
+       - text: |
+          Goodbye
+       - text: |
+          Bye for now.
+       - text: |
+          Bye!
+   utter_explain:
+       - text: |
+          Please explain why you are unsubscribing.
+       - text: |
+          Why are you unsubscribing?
+       - text: |
+          Please let us know why.
+       - text: |
+          Unsubsribing? Let us know the reason why.
+   utter_empathy:
+       - text: |
+          That is too bad. We have unsubscribed you from the newsletter.
+       - text: |
+          Sorry to hear that. We have unsubscribed you from the newsletter.
+       - text: |
+           We understand. You will no longer receive the newsletter.
+       - text: |
+           No problem. We have unsubscribed you from the newsletter.
+actions:
+- '...'
+- utter_greet
+- utter_subscribed
+- utter_explain
+- utter_empathy
+- utter_thanks
+- utter_goodbye
+forms:
+  newsletter_form:
+    required_slots:
+      email:
+      - type: from_text
